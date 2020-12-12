@@ -6,6 +6,46 @@
 <a href="https://www.cmonbaby.com">
 <img src="https://img.shields.io/bintray/v/cmonbaby/simon/baiduOCR_library?label=maven-central"></a>
 
+## About BaiduOCR Code
+
+#### 1. initAccessToken
+```java
+// initAccessToken();
+new OCRHelper.Builder(this)
+        .listener(result -> {
+            hasGotToken = true;
+            LogUtils.e(result.getAccessToken());
+        })
+        .build()
+.initAccessTokenWithAkSk();
+```
+
+#### 2. ocr to bankcard
+```java
+new OCRHelper.Builder(this)
+                .cameraType(CameraActivity.CONTENT_TYPE_BANK_CARD)
+                .requestCode(REQUEST_CODE_BANKCARD)
+                .build()
+                .toCamera();
+```
+
+#### 3. ocr from album
+```java
+new OCRHelper.Builder(this)
+                .requestCode(REQUEST_CODE_PICK_IMAGE_FRONT)
+                .build()
+                .toAlbum();
+```
+
+#### 4. ocr to idcard
+```java
+new OCRHelper.Builder(this)
+                .cameraType(CameraActivity.CONTENT_TYPE_ID_CARD_FRONT)
+                .requestCode(REQUEST_CODE_CAMERA)
+                .build()
+                .toCamera();
+```
+
 Via Gradle:
 ```gradle
 implementation 'com.baidu.ocr.ui:cmonbaby_ocr:1.0.0'
