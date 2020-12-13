@@ -2,13 +2,9 @@
 
 ## BaiduOCR ![Build Status](https://travis-ci.org/greenrobot/EventBus.svg?branch=master)
 
-## Add BaiduOCR to your project
-<a href="https://www.cmonbaby.com">
-<img src="https://img.shields.io/bintray/v/cmonbaby/simon/baiduOCR_library?label=maven-central"></a>
-
 ## About BaiduOCR Code
 
-#### 1. initAccessToken
+#### * initAccessToken
 ```java
 // initAccessToken();
 new OCRHelper.Builder(this)
@@ -20,7 +16,7 @@ new OCRHelper.Builder(this)
 .initAccessTokenWithAkSk();
 ```
 
-#### 2. ocr to bankcard
+#### * ocr to bankcard
 ```java
 new OCRHelper.Builder(this)
                 .cameraType(CameraActivity.CONTENT_TYPE_BANK_CARD)
@@ -29,7 +25,7 @@ new OCRHelper.Builder(this)
                 .toCamera();
 ```
 
-#### 3. ocr from album
+#### * ocr from album
 ```java
 new OCRHelper.Builder(this)
                 .requestCode(REQUEST_CODE_PICK_IMAGE_FRONT)
@@ -37,7 +33,7 @@ new OCRHelper.Builder(this)
                 .toAlbum();
 ```
 
-#### 4. ocr to idcard
+#### * ocr to idcard
 ```java
 new OCRHelper.Builder(this)
                 .cameraType(CameraActivity.CONTENT_TYPE_ID_CARD_FRONT)
